@@ -46,7 +46,7 @@ if( ! defined( 'ABSPATH' ) ){
 class testPlugin{
 
   function __construct(){
-    add_action('init', array( $this, 'custom_post_type'))
+    add_action('init', array( $this, 'custom_post_type'));
   }
 
   function activate(){
