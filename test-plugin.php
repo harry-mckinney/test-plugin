@@ -80,7 +80,7 @@ class testPlugin{
   function enqueue(){
     //enqueue all scripts
     wp_enqueue_style( 'style', plugins_url('/assets/style.css', __FILE__), array( '' ) );
-    wp_enqueue_style( 'script', plugins_url('/assets/script.js', __FILE__), array( '' ) );
+    wp_enqueue_script( 'script', plugins_url('/assets/script.js', __FILE__), array( '' ) );
   }
 
 }
