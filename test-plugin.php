@@ -67,10 +67,15 @@ class testPlugin{
   }
 */
 
+//NOTE this was moved to a root file called uninstall.php
+
   function custom_post_type(){
     register_post_type('screencast', ['public'=>true, 'label' => 'Screen Cast']);
   }
 
+  function enqueue(){
+    //enqueue all scripts 
+  }
 
 }
 
