@@ -43,7 +43,7 @@ if( ! defined( 'ABSPATH' ) ){
 
 }
 
-echo plugins_url();
+//echo plugins_url(); //NOTE http://localhost:8888/wordpress/wp-content/plugin 
 
 class testPlugin{
 
