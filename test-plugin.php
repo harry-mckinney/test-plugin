@@ -38,5 +38,5 @@ SOFTWARE.
 */
 
 if( ! defined( 'ABSPATH' ) ){
-  die;
+  die; //this is a simple way to keep out users w/o proper permissions
 }
