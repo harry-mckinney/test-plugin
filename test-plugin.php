@@ -44,9 +44,16 @@ if( ! defined( 'ABSPATH' ) ){
 }
 
 class testPlugin{
-  function __construct(){
+  function activate(){
+    echo 'The plugin was activated';
+  }
+  function deactivate(){
+    echo 'The plugin was deactivated';
+  }
+  function uninstall(){
 
   }
+
 }
 
 if (class_exists('testPlugin')){
@@ -54,3 +61,13 @@ if (class_exists('testPlugin')){
   $testPlugin = new testPlugin();
 
 }
+
+// native assets run during activation, deactivation and uninstallation of the plugin
+
+//activate
+register_activation_hook( __FILE__, array( $testPlugin, 'activate'));
+
+//deactivate
+register_deactivation_hook( __FILE__, array( $testPlugin, 'deactivate'));
+
+//uninstall
