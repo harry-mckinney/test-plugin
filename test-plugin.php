@@ -38,5 +38,19 @@ SOFTWARE.
 */
 
 if( ! defined( 'ABSPATH' ) ){
+
   die; //this is a simple way to keep out users w/o proper permissions
+
+}
+
+class testPlugin{
+  function __construct($string){
+    echo $string;
+  }
+}
+
+if (class_exists('testPlugin')){
+
+  $testPlugin = new testPlugin('kind-of-a-silly-test');
+
 }
