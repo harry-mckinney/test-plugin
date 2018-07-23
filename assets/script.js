@@ -1,3 +1,3 @@
 // javascript for custom plugin
 
-console.log('enqueue worked as expected');
+console.log('script.js is active on the page');
