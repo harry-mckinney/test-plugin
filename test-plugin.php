@@ -68,7 +68,7 @@ class testPlugin{
 */
 
   function custom_post_type(){
-    register_post_type('screen-cast', ['public'=>true, 'label' => 'Screen Cast']);
+    register_post_type('screencast', ['public'=>true, 'label' => 'Screen Cast']);
   }
 
 
