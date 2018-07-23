@@ -44,15 +44,29 @@ if( ! defined( 'ABSPATH' ) ){
 }
 
 class testPlugin{
-  function activate(){
-    echo 'The plugin was activated';
-  }
-  function deactivate(){
-    echo 'The plugin was deactivated';
-  }
-  function uninstall(){
 
+  function __construct(){
+    add_action('init', array( $this, 'custom_post_type'))
   }
+
+  function activate(){
+    //generate a CPT
+    //flush rewrite rules
+  }
+
+  function deactivate(){
+    // flush rewrite rules
+  }
+
+  function uninstall(){
+    //delete CPT
+    //delete all plugin data from the database
+  }
+
+  function custom_post_type(){
+    register_post_type('screen-cast', ['public'=>true, 'label' => 'Screen Cast']);
+  }
+
 
 }
 
