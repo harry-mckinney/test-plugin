@@ -50,7 +50,7 @@ class testPlugin{
   }
 
   function register(){
-    add_action( 'admin_enqueue_scripts', array( $this, 'enqueue') );
+    add_action( 'admin_enqueue_scripts', array( $this, 'enqueue') ); //NOTE w/o the admin it would show on the site
   }
 
   function activate(){
