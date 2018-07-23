@@ -43,6 +43,8 @@ if( ! defined( 'ABSPATH' ) ){
 
 }
 
+echo plugins_url();
+
 class testPlugin{
 
   function __construct(){
