@@ -51,17 +51,21 @@ class testPlugin{
 
   function activate(){
     //generate a CPT
+    $htis->custom_post_type();
     //flush rewrite rules
+    flush_rewrite_rules();
   }
 
   function deactivate(){
     // flush rewrite rules
   }
 
+/*
   function uninstall(){
     //delete CPT
     //delete all plugin data from the database
   }
+*/
 
   function custom_post_type(){
     register_post_type('screen-cast', ['public'=>true, 'label' => 'Screen Cast']);
@@ -85,3 +89,4 @@ register_activation_hook( __FILE__, array( $testPlugin, 'activate'));
 register_deactivation_hook( __FILE__, array( $testPlugin, 'deactivate'));
 
 //uninstall
+//register_uninstall_hook( __FILE__, array( $testPlugin, 'uninstall'));
