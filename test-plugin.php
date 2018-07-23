@@ -51,7 +51,7 @@ class testPlugin{
 
   function activate(){
     //generate a CPT
-    $htis->custom_post_type();
+    $this->custom_post_type();
     //flush rewrite rules
     flush_rewrite_rules();
   }
