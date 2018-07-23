@@ -44,13 +44,13 @@ if( ! defined( 'ABSPATH' ) ){
 }
 
 class testPlugin{
-  function __construct($string){
-    echo $string;
+  function __construct(){
+
   }
 }
 
 if (class_exists('testPlugin')){
 
-  $testPlugin = new testPlugin( array(1,2,3));
+  $testPlugin = new testPlugin();
 
 }
