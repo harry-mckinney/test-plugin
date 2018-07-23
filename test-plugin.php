@@ -49,6 +49,10 @@ class testPlugin{
     add_action('init', array( $this, 'custom_post_type'));
   }
 
+  function register(){
+    add_action( 'admin_enqueue_scripts', array( $this, 'enqueue') );
+  }
+
   function activate(){
     //generate a CPT
     $this->custom_post_type();
@@ -74,7 +78,9 @@ class testPlugin{
   }
 
   function enqueue(){
-    //enqueue all scripts 
+    //enqueue all scripts
+    wp_enqueue_style( 'style', plugins_url('/assets/style.css', __FILE__), array( '' ) );
+    wp_enqueue_style( 'script', plugins_url('/assets/script.js', __FILE__), array( '' ) );
   }
 
 }
@@ -82,6 +88,7 @@ class testPlugin{
 if (class_exists('testPlugin')){
 
   $testPlugin = new testPlugin();
+  $testPlugin->register();
 
 }
 
