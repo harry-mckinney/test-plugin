@@ -51,6 +51,6 @@ class testPlugin{
 
 if (class_exists('testPlugin')){
 
-  $testPlugin = new testPlugin('kind-of-a-silly-test');
+  $testPlugin = new testPlugin( array(1,2,3));
 
 }
